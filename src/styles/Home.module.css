@@ -1,9 +1,10 @@
 .container {
   padding: 0 2rem;
+  max-height: calc(100% - 4rem);
 }
 
 .main {
-  min-height: 100vh;
+  height: calc(100vh - 6rem);
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -71,6 +72,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  margin: 40px;
 }
 
 .card {
@@ -82,9 +84,10 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  min-width: 300px;
 }
 
+.card:nth-child(1),
 .card:hover,
 .card:focus,
 .card:active {
