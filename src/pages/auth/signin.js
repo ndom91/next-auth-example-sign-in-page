@@ -1,12 +1,12 @@
-import { signIn, getSession, getCsrfToken, getProviders } from 'next-auth/react'
+import { signIn, getCsrfToken, getProviders } from 'next-auth/react'
 import Image from 'next/image'
 import Header from '../../components/header'
 import styles from '../../styles/Signin.module.css'
 
-const Signin = ({ csrfToken, session, providers }) => {
+const Signin = ({ csrfToken, providers }) => {
   return (
     <div style={{ overflow: 'hidden', position: 'relative' }}>
-      {session && <Header />}
+      <Header />
       <div className={styles.wrapper} />
       <div className={styles.content}>
         <div className={styles.cardWrapper}>
@@ -39,12 +39,10 @@ export default Signin
 export async function getServerSideProps(context) {
   const providers = await getProviders()
   const csrfToken = await getCsrfToken(context)
-  const session = await getSession(context)
   return {
     props: {
       providers,
-      csrfToken,
-      session
+      csrfToken
     },
   }
 }
