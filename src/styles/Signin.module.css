@@ -11,31 +11,6 @@
   z-index: 2;
 }
 
-/* Less than Large */
-@media (max-width: 1024px) {
-  .wrapper {
-    left: -50px; 
-  }
-}
-
-/* Less than Medium */
-@media (max-width: 768px) {
-  .wrapper {
-    left: -100px; 
-    width: 80%;
-  }
-  .content {
-    justify-content: center;
-  }
-  .cardWrapper {
-    margin-left: 0px;
-  }
-  /* .styledPattern { */
-  /*   height: 100%; */
-  /*   width: auto; */
-  /* } */
-}
-
 .content {
   display: flex;
   align-items: center;
@@ -125,4 +100,23 @@ button.primaryBtn {
   display: flex;
   right: -200px !important;
   width: auto;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    left: -50px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    left: -100px; 
+    width: 80%;
+  }
+  .content {
+    justify-content: center;
+  }
+  .cardWrapper {
+    margin-left: 0px;
+  }
 }
