@@ -35,10 +35,12 @@ const Signin = ({ csrfToken, providers }) => {
 export default Signin
 
 export async function getServerSideProps(context) {
+  const providers = await getProviders()
+  const csrfToken = await getCsrfToken(context)
   return {
     props: {
-      providers: await getProviders(),
-      csrfToken: await getCsrfToken(context),
+      providers,
+      csrfToken
     },
   }
 }

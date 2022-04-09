@@ -30,6 +30,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You will find the example sign-in page under `/src/pages/auth/signin.js`. 
 
+This has an example OAuth provider (`Github`) and an example magic link Email login field, although the Email provider is not setup in this repo. For email setup, please check out the [docs](https://next-auth.js.org/configuration/providers/email) for more information.
+
 ## 📝 License
 
 MIT
