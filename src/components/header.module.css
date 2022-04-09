@@ -1,5 +1,7 @@
 .header {
-  z-index: 99;
+  z-index: 3;
+  position: relative;
+  color: #fff;
   margin: 0 auto;
   width: max(500px, 40vw);
 }
@@ -20,7 +22,7 @@
   border-radius: 0 0 0.6rem 0.6rem;
   padding: 0.6rem 1rem;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.2s ease-in;
 }
 
