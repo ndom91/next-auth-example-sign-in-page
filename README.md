@@ -1,5 +1,9 @@
 # 🔐 Example Sign-in Page
 
+This is a custom [NextAuth.js](https://next-auth.js.org) sign-in page I'd once used in an internal application. 
+
+I decided to open-source it in this example repository. Feel free to use as you see fit!
+
 ## 📺 Screenshot
 
 ![Screenshot 1](https://i.imgur.com/YLw7d5W.png)
