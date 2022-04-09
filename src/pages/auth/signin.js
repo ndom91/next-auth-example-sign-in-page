@@ -29,7 +29,7 @@ const Signin = ({ csrfToken, providers }) => {
           </div>
         </div>
       </div>
-      <Image src='/login_pattern.svg' alt='Pattern Background' layout='fill' className={styles.styledPattern} />
+      <img src='/login_pattern.svg' alt='Pattern Background' layout='fill' className={styles.styledPattern} />
     </div>
   )
 }

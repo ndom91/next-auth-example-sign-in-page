@@ -12,25 +12,26 @@
 }
 
 .content {
-  display: flex;
-  align-items: center;
-  height: 100vh;
   position: relative;
-  z-index: 2;
+  display: flex;
   padding: 30px;
-  text-align: center;
+  width: 100%;
+  height: calc(100vh - 64px);
+  align-items: center;
   font-weight: bold;
+  text-align: center;
+  z-index: 2;
 }
 
 .cardWrapper {
   display: flex;
+  width: 400px;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  width: 400px;
   margin-left: 15%;
-  z-index: 3;
   font-size: 1.2rem;
+  z-index: 3;
 }
 
 .cardContent {
@@ -95,23 +96,27 @@ button.primaryBtn {
 }
 
 .styledPattern {
-  z-index: 1;
   position: absolute;
-  display: flex;
-  right: -200px !important;
-  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
 @media (max-width: 1024px) {
   .wrapper {
     left: -50px; 
+    width: 80%;
   }
 }
 
 @media (max-width: 768px) {
   .wrapper {
-    left: -100px; 
-    width: 80%;
+    width: 200%;
+  }
+  .styledPattern {
+    display: none !important;
   }
   .content {
     justify-content: center;
