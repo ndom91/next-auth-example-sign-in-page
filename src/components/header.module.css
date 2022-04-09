@@ -3,7 +3,8 @@
   position: relative;
   color: #fff;
   margin: 0 auto;
-  width: max(500px, 40vw);
+  width: 400px;
+  max-width: 80%;
 }
 
 /* Set min-height to avoid page reflow while session loading */
@@ -13,16 +14,19 @@
   width: 100%;
 }
 
+.signedInStatus .loaded {
+  padding: 0.6rem 1rem;
+}
+
 .loading,
 .loaded {
   position: relative;
-  top: 0;
+  top: 0px;
   opacity: 1;
   overflow: hidden;
   border-radius: 0 0 0.6rem 0.6rem;
-  padding: 0.6rem 1rem;
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(150, 150, 150, 0.4);
   transition: all 0.2s ease-in;
 }
 
@@ -72,8 +76,8 @@
   padding: 0.7rem 0.8rem;
   position: relative;
   z-index: 10;
-  background-color: transparent;
-  color: #555;
+  background-color: #a4abbd;
+  color: #404756;
 }
 
 .buttonPrimary {
