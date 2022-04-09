@@ -1,10 +1,10 @@
-# Example Sign-in Page
+# 🔐 Example Sign-in Page
 
-## Screenshot
+## 📺 Screenshot
 
 ![Screenshot 1](https://i.imgur.com/YLw7d5W.png)
 
-## Getting Started
+## 🚀 Getting Started
 
 
 1. Install dependencies
@@ -22,6 +22,10 @@ $ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## License
+## 🛡 NextAuth.js
+
+You will find the example sign-in page under `/src/pages/auth/signin.js`. 
+
+## 📝 License
 
 MIT
