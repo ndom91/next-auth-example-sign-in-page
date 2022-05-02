@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "./assign-nextauth-secret.sh"
+    "postinstall": "./assign-nextauth-secret.sh",
+    "postbuild": "./assign-nextauth-secret.sh"
   },
   "dependencies": {
     "next": "12.1.4",
