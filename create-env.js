@@ -1,6 +1,6 @@
-const { access } = require('fs')
-const { appendFile, writeFile } = require('fs')
+const { access, appendFile, writeFile } = require('fs/promises')
 const { randomBytes } = require('crypto')
+const { constants } = require('fs')
 
 if (process.env.NEXTAUTH_SECRET) {
   process.exit(0)
@@ -8,11 +8,10 @@ if (process.env.NEXTAUTH_SECRET) {
 
 (async () => {
   const randomString = randomBytes(16).toString('hex')
-  access("./.env", (error) => {
-    if (error) {
-      writeFile('./.env', `NEXTAUTH_SECRET=${randomString}\n`)
-      return
-    }
-    appendFile('./.env', `\nNEXTAUTH_SECRET=${randomString}\n`)
-  })
+  try {
+    await access("./.env", constants.R_OK)
+    await appendFile('./.env', `\nNEXTAUTH_SECRET=${randomString}\n`)
+  } catch (error) {
+    await writeFile('./.env', `NEXTAUTH_SECRET=${randomString}\n`)
+  }
 })()
