@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "bash ./assign-nextauth-secret.sh"
   },
   "dependencies": {
     "next": "12.1.4",
