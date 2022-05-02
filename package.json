@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node create-env.js && next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "./assign-nextauth-secret.sh",
-    "postbuild": "./assign-nextauth-secret.sh"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "12.1.4",
