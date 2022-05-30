@@ -13,7 +13,7 @@ const Signin = ({ csrfToken, providers }) => {
           <Image src='/katalog_full.svg' width="196px" height="64px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }} />
           <div className={styles.cardContent}>
             <input name='csrfToken' type='hidden' defaultValue={csrfToken} />
-            <input placeholder='Email [Example - Please use Github]' size='large' />
+            <input placeholder='Email (Not Setup - Please Use Github)' size='large' />
             <button className={styles.primaryBtn}>
               Submit
             </button>
