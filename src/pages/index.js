@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -18,21 +18,36 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <Link passHref href="/auth/signin">
-            <a className={styles.card}>
+          <Link href="/auth/signin">
+            <div className={styles.card}>
               <h2>NextAuth.js Signin</h2>
               <p>Visit custom sign-in page</p>
-            </a>
+            </div>
           </Link>
-          <a className={styles.card} href="https://next-auth.js.org" rel="noreferrer" target="_blank">
+          <a
+            className={styles.card}
+            href="https://next-auth.js.org"
+            rel="noreferrer"
+            target="_blank"
+          >
             <h2>NextAuth.js Docs</h2>
             <p>next-auth documentation</p>
           </a>
-          <a className={styles.card} href="https://nextjs.org/docs" rel="noreferrer" target="_blank">
+          <a
+            className={styles.card}
+            href="https://nextjs.org/docs"
+            rel="noreferrer"
+            target="_blank"
+          >
             <h2>Next.js Docs</h2>
             <p>next documentation</p>
           </a>
-          <a className={styles.card} href="https://github.com/nextauthjs/next-auth" rel="noreferrer" target="_blank">
+          <a
+            className={styles.card}
+            href="https://github.com/nextauthjs/next-auth"
+            rel="noreferrer"
+            target="_blank"
+          >
             <h2>NextAuth.js Repo</h2>
             <p>next-auth repository</p>
           </a>
@@ -45,12 +60,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
