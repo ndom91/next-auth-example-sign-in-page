@@ -24,7 +24,11 @@ $ npm run dev
 $ yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Create a new `.env` file and fill in the variables:
+- To get `GITHUB_ID` and `GITHUB_SECRET`, navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. Don't forget to add the callback URL `http://<YOUR WEBSITE>/api/auth/callback/github`.
+- To get `NEXTAUTH_SECRET`, use a [a generator](https://generate-secret.vercel.app/32).
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 🛡 NextAuth.js
 
