@@ -18,7 +18,7 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <Link passHref href="/auth/signin">
+          <Link passHref href="/auth/signin" legacyBehavior>
             <a className={styles.card}>
               <h2>NextAuth.js Signin</h2>
               <p>Visit custom sign-in page</p>
@@ -41,7 +41,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
         >
