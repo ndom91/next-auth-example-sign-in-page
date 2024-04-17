@@ -9,7 +9,7 @@ I decided to open-source it in this example repository. Feel free to use as you 
 
 ## 📺 Screenshot
 
-![Screenshot 1](https://i.imgur.com/YLw7d5W.png)
+![Screenshot 1](./public/screenshot.png)
 
 ## 🚀 Getting Started
 
