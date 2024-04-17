@@ -19,9 +19,9 @@ export default async function SignInPage() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className="p-2 text-white rounded-full size-12 bg-zinc-800"
               viewBox="0 0 24 24"
             >
@@ -37,6 +37,7 @@ export default async function SignInPage() {
                 action={async (formData) => {
                   "use server";
                   if (provider.id === "credentials") {
+                    console.log("\n\nFORMDATA", formData);
                     await signIn(provider.id, formData);
                   } else {
                     await signIn(provider.id);
@@ -44,14 +45,25 @@ export default async function SignInPage() {
                 }}
               >
                 {provider.id === "credentials" && (
-                  <label className="text-base font-light text-neutral-800">
-                    Password
-                    <input
-                      className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"
-                      name="password"
-                      type="password"
-                    />
-                  </label>
+                  <>
+                    <label className="text-base font-light text-neutral-800">
+                      Username
+                      <input
+                        className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"
+                        name="username"
+                        type="text"
+                      />
+                    </label>
+                    <label className="text-base font-light text-neutral-800">
+                      Password
+                      <input
+                        className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"
+                        required
+                        name="password"
+                        type="password"
+                      />
+                    </label>
+                  </>
                 )}
                 <button
                   type="submit"

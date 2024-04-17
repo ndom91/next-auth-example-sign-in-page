@@ -3,7 +3,7 @@
 This is a custom [Auth.js v5](https://authjs.dev) sign-in page I'd once used in an internal application. I decided to open-source it in this template repository so feel free to use as you see fit! This was created with `create-next-app@14.2.1` and uses `next-auth@5.0.0-beta.16`.
 
 > [!NOTE]
-> The default password is `password`
+> The default credentials are anything for the username and `password` for the password
 
 ## 📺 Screenshot
 
