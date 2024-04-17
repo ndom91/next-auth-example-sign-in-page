@@ -23,18 +23,22 @@ pnpm install
 pnpm dev
 ```
 
-3. Create a new `.env` file and fill in the variables.
+3. Create your own environment variables
 
-- `AUTH_SECRET` (required) - `openssl rand -base64 33` or use a [a generator](https://generate-secret.vercel.app/32).
-- `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` (optional) - navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. Don't forget to add the correct callback URL `http://<YOUR WEBSITE>/api/auth/callback/github` ([Docs](https://authjs.dev/getting-started/providers/github))
+```bash
+cp .env.local.example .env.local
+```
+
+    - `AUTH_SECRET` (**required**) - `openssl rand -base64 33` or use a [a generator](https://generate-secret.vercel.app/32).
+    - `AUTH_GITHUB_*` (**optional**) - navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. For a more detailed walk-through, check out the Auth.js [guide](https://authjs.dev/guides/configuring-github))
 
 4. Open [http://localhost:3000](http://localhost:3000) and click "Signin" in the top-left to navigate to the signin page (`/auth/login`).
 
-## 🛡 Auth.js
+## 🔐 Auth.js
 
 You will find the example sign-in page under `/app/auth/login/page.tsx`.
 
-This page has both the [`Credential` provider](https://authjs.dev/getting-started/providers/credentials) and an example OAuth provider (`Github`) setup.
+This page has both the [`Credential` provider](https://authjs.dev/getting-started/providers/credentials) and an example OAuth provider ([`Github`](https://authjs.dev/getting-started/providers/github)) setup. More information can be found at https://authjs.dev
 
 ## 📝 License
 
