@@ -7,7 +7,7 @@ This is a custom [Auth.js v5](https://authjs.dev) sign-in page I'd once used in 
 
 ## 📺 Screenshot
 
-![Screenshot 1](./public/screenshot.png)
+![Screenshot 1](./public/screenshot_1.png)
 
 ## 🚀 Getting Started
 
