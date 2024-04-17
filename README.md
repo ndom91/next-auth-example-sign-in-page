@@ -17,22 +17,22 @@ This is a custom [Auth.js v5](https://authjs.dev) sign-in page I'd once used in 
 pnpm install
 ```
 
-2. Start dev server
-
-```bash
-pnpm dev
-```
-
-3. Create your own environment variables
+2. Create your own environment variables
 
 ```bash
 cp .env.local.example .env.local
 ```
 
-    - `AUTH_SECRET` (**required**) - `openssl rand -base64 33` or use a [a generator](https://generate-secret.vercel.app/32).
-    - `AUTH_GITHUB_*` (**optional**) - navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. For a more detailed walk-through, check out the Auth.js [guide](https://authjs.dev/guides/configuring-github))
+  * `AUTH_SECRET` (**required**) - `openssl rand -base64 33` or use a [a generator](https://generate-secret.vercel.app/32).  
+  * `AUTH_GITHUB_*` (**optional**) - navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. For a more detailed walk-through, check out the Auth.js [guide](https://authjs.dev/guides/configuring-github))
 
-4. Open [http://localhost:3000](http://localhost:3000) and click "Signin" in the top-left to navigate to the signin page (`/auth/login`).
+3. Start dev server
+
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) and click "Signin" in the top-left or navigate to the signin page directly ([`/auth/login`](http://localhost:3000/auth/login)).
 
 ## 🔐 Auth.js
 
