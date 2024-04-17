@@ -37,7 +37,6 @@ export default async function SignInPage() {
                 action={async (formData) => {
                   "use server";
                   if (provider.id === "credentials") {
-                    console.log("\n\nFORMDATA", formData);
                     await signIn(provider.id, formData);
                   } else {
                     await signIn(provider.id);
@@ -50,6 +49,7 @@ export default async function SignInPage() {
                       Username
                       <input
                         className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"
+                        data-1p-ignore
                         name="username"
                         type="text"
                       />
@@ -59,6 +59,8 @@ export default async function SignInPage() {
                       <input
                         className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"
                         required
+                        data-1p-ignore
+                        placeholder="password"
                         name="password"
                         type="password"
                       />
@@ -72,11 +74,11 @@ export default async function SignInPage() {
                   <span>Sign in with {provider.name}</span>
                 </button>
                 <div className="flex gap-2 items-center my-4">
-                  <div className="flex-1 bg-neutral-800 h-[1px]" />
-                  <span className="text-xs leading-4 uppercase text-neutral-800">
+                  <div className="flex-1 bg-neutral-300 h-[1px]" />
+                  <span className="text-xs leading-4 uppercase text-neutral-500">
                     or
                   </span>
-                  <div className="flex-1 bg-neutral-800 h-[1px]" />
+                  <div className="flex-1 bg-neutral-300 h-[1px]" />
                 </div>
               </form>
             ))}
