@@ -46,15 +46,6 @@ export default async function SignInPage() {
                 {provider.id === "credentials" && (
                   <>
                     <label className="text-base font-light text-neutral-800">
-                      Username
-                      <input
-                        className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"
-                        data-1p-ignore
-                        name="username"
-                        type="text"
-                      />
-                    </label>
-                    <label className="text-base font-light text-neutral-800">
                       Password
                       <input
                         className="block flex-1 p-3 w-full font-normal rounded-md border border-gray-200 transition sm:text-sm placeholder:font-light placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500"

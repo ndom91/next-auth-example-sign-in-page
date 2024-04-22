@@ -8,11 +8,15 @@ const providers: Provider[] = [
   Credentials({
     credentials: { password: { label: "Password", type: "password" } },
     async authorize(c) {
-      if (c.password !== "password") return null;
+      if (c.password !== "password") {
+        return null;
+      }
+
       return {
-        id: "test",
-        name: "Test User",
-        email: "test@example.com",
+        id: "1",
+        name: "Fill Murray",
+        email: "fill@murray.com",
+        image: "https://source.boringavatars.com/marble/120",
       };
     },
   }),
@@ -28,6 +32,7 @@ export const providerMap = providers.map((provider) => {
 });
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  debug: true,
   providers,
   pages: {
     signIn: "/auth/login",
