@@ -39,7 +39,7 @@ export default async function SignInPage() {
                   if (provider.id === "credentials") {
                     await signIn(provider.id, formData);
                   } else {
-                    await signIn(provider.id);
+                    await signIn(provider.id, { redirectTo: "/" });
                   }
                 }}
               >
