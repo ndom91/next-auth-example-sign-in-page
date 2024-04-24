@@ -37,7 +37,10 @@ export default async function SignInPage() {
                 action={async (formData) => {
                   "use server";
                   if (provider.id === "credentials") {
-                    await signIn(provider.id, formData);
+                    await signIn(provider.id, {
+                      redirectTo: "/",
+                      password: formData.get('password')
+                    });
                   } else {
                     await signIn(provider.id, { redirectTo: "/" });
                   }
