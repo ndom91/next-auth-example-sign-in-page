@@ -32,7 +32,7 @@ export const providerMap = providers.map((provider) => {
 });
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  debug: true,
+  debug: process.env.NODE_ENV !== "production" ? true : false,
   providers,
   pages: {
     signIn: "/auth/login",
