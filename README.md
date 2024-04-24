@@ -23,8 +23,9 @@ pnpm install
 cp .env.local.example .env.local
 ```
 
-- `AUTH_SECRET` (**required**) - `openssl rand -base64 33` or use a [a generator](https://generate-secret.vercel.app/32).
-- `AUTH_GITHUB_*` (**optional**) - navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. For a more detailed walk-through, check out the Auth.js [guide](https://authjs.dev/guides/configuring-github))
+- `AUTH_SECRET` (**required**) - `openssl rand -base64 33` or use [a generator](https://generate-secret.vercel.app/33) like `npx auth secret`
+- `AUTH_GITHUB_*` (**optional**) - navigate to [GitHub > Settings > Apps](https://github.com/settings/apps) and create a new app. 
+  - For a more detailed walk-through, check out the Auth.js [guide](https://authjs.dev/guides/configuring-github)
 
 3. Start dev server
 
